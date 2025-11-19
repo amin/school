@@ -1,3 +1,6 @@
 [submodule "Projects/gateway-theater"]
 	path = Projects/gateway-theater
 	url = git@github.com:amin/gateway-theater.git
+[submodule "Projects/kinforma"]
+	path = Projects/kinforma
+	url = git@github.com:amin/kinforma.git
