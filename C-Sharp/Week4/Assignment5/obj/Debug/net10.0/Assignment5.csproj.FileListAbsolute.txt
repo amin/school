@@ -1,0 +1,15 @@
+/home/amincident/School/C-Sharp/Week4/Assignment5/bin/Debug/net10.0/Assignment5
+/home/amincident/School/C-Sharp/Week4/Assignment5/bin/Debug/net10.0/Assignment5.deps.json
+/home/amincident/School/C-Sharp/Week4/Assignment5/bin/Debug/net10.0/Assignment5.runtimeconfig.json
+/home/amincident/School/C-Sharp/Week4/Assignment5/bin/Debug/net10.0/Assignment5.dll
+/home/amincident/School/C-Sharp/Week4/Assignment5/bin/Debug/net10.0/Assignment5.pdb
+/home/amincident/School/C-Sharp/Week4/Assignment5/obj/Debug/net10.0/Assignment5.GeneratedMSBuildEditorConfig.editorconfig
+/home/amincident/School/C-Sharp/Week4/Assignment5/obj/Debug/net10.0/Assignment5.AssemblyInfoInputs.cache
+/home/amincident/School/C-Sharp/Week4/Assignment5/obj/Debug/net10.0/Assignment5.AssemblyInfo.cs
+/home/amincident/School/C-Sharp/Week4/Assignment5/obj/Debug/net10.0/Assignment5.csproj.CoreCompileInputs.cache
+/home/amincident/School/C-Sharp/Week4/Assignment5/obj/Debug/net10.0/Assignment5.sourcelink.json
+/home/amincident/School/C-Sharp/Week4/Assignment5/obj/Debug/net10.0/Assignment5.dll
+/home/amincident/School/C-Sharp/Week4/Assignment5/obj/Debug/net10.0/refint/Assignment5.dll
+/home/amincident/School/C-Sharp/Week4/Assignment5/obj/Debug/net10.0/Assignment5.pdb
+/home/amincident/School/C-Sharp/Week4/Assignment5/obj/Debug/net10.0/Assignment5.genruntimeconfig.cache
+/home/amincident/School/C-Sharp/Week4/Assignment5/obj/Debug/net10.0/ref/Assignment5.dll
