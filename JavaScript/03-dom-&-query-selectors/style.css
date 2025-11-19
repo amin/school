@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.row {
+    display: flex;
+}
+
+/* square */
+
+.square {
+    width: 75px;
+    height: 75px;
+    background-color: rgb(226, 205, 205);
+    border: 1px solid black;
+    position: relative;
+}
+
+.square.odd {
+    background-color: #f8e7bb';
+}
+
+.square.even {
+    background-color: #21b51c;
+}
+
+/* span */
+
+span {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+span.number {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+}
+
+span.letter {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+}
+
+/* even */
+
+.odd {
+    color: gray;
+}
