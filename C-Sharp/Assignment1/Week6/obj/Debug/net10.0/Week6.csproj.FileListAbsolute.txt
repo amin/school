@@ -1,0 +1,15 @@
+/home/amincident/School/C-Sharp/Assignment1/Week6/bin/Debug/net10.0/Week6
+/home/amincident/School/C-Sharp/Assignment1/Week6/bin/Debug/net10.0/Week6.deps.json
+/home/amincident/School/C-Sharp/Assignment1/Week6/bin/Debug/net10.0/Week6.runtimeconfig.json
+/home/amincident/School/C-Sharp/Assignment1/Week6/bin/Debug/net10.0/Week6.dll
+/home/amincident/School/C-Sharp/Assignment1/Week6/bin/Debug/net10.0/Week6.pdb
+/home/amincident/School/C-Sharp/Assignment1/Week6/obj/Debug/net10.0/Week6.GeneratedMSBuildEditorConfig.editorconfig
+/home/amincident/School/C-Sharp/Assignment1/Week6/obj/Debug/net10.0/Week6.AssemblyInfoInputs.cache
+/home/amincident/School/C-Sharp/Assignment1/Week6/obj/Debug/net10.0/Week6.AssemblyInfo.cs
+/home/amincident/School/C-Sharp/Assignment1/Week6/obj/Debug/net10.0/Week6.csproj.CoreCompileInputs.cache
+/home/amincident/School/C-Sharp/Assignment1/Week6/obj/Debug/net10.0/Week6.sourcelink.json
+/home/amincident/School/C-Sharp/Assignment1/Week6/obj/Debug/net10.0/Week6.dll
+/home/amincident/School/C-Sharp/Assignment1/Week6/obj/Debug/net10.0/refint/Week6.dll
+/home/amincident/School/C-Sharp/Assignment1/Week6/obj/Debug/net10.0/Week6.pdb
+/home/amincident/School/C-Sharp/Assignment1/Week6/obj/Debug/net10.0/Week6.genruntimeconfig.cache
+/home/amincident/School/C-Sharp/Assignment1/Week6/obj/Debug/net10.0/ref/Week6.dll

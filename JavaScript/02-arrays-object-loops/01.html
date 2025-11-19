@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fullName = 'Britney Jean Spears';
+        console.log(`First name: ${fullName.split(" ")[0]}`);
+        console.log(`Middle name: ${fullName.split(" ")[1]}`);
+        console.log(`Last name: ${fullName.split(" ")[2]}`);
+
+
+        // const newFullName = `${fullName.split(" ")[0]} ${fullName.split(" ")[2]}`;
+
+        const newFullName = fullName.split(" ")[0].concat(" ", fullName.split(" ")[2]);
+        console.log(newFullName);
+    </script>
+</body>
+</html>

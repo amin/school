@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+}
+
+#chessboard {
+    zoom: 1;
+}
+
+.zoom {
+    text-align: center;
+}
+
+.zoom-reset {
+    margin-bottom: 2rem;
+}
+
+/* square */
+
+.square {
+    width: 75px;
+    height: 75px;
+    background-color: rgb(226, 205, 205);
+    border: 1px solid black;
+    position: relative;
+    cursor: pointer;
+}
+
+.square.odd {
+    background-color: #f8e7bb';
+}
+
+.square.even {
+    background-color: #21b51c;
+}
+
+.square.active {
+    background-color: teal;
+}
+/* span */
+
+span {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+span.number {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+}
+
+span.letter {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+}
+
+/* even */
+
+.odd {
+    color: gray;
+}

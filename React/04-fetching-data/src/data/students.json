@@ -1,0 +1,9 @@
+[
+  { "id": 1, "firstname": "Rune", "lastname": "Panda", "isPresent": false, "groupId": null },
+  { "id": 2, "firstname": "Lena", "lastname": "Hartmann", "isPresent": false, "groupId": null },
+  { "id": 3, "firstname": "Marcus", "lastname": "Osei", "isPresent": true, "groupId": null },
+  { "id": 4, "firstname": "Sofia", "lastname": "Reyes", "isPresent": true, "groupId": null },
+  { "id": 5, "firstname": "Yuki", "lastname": "Tanaka", "isPresent": true, "groupId": null },
+  { "id": 6, "firstname": "Tariq", "lastname": "Nasser", "isPresent": true, "groupId": null },
+  { "id": 7, "firstname": "Amin", "lastname": "El-Rifai", "isPresent": true, "groupId": null }
+]

@@ -1,0 +1,205 @@
+#root {
+  width: 100%;
+}
+
+/* ── Layout ─────────────────────────────────────── */
+.layout {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 1fr auto;
+  gap: 1rem;
+  height: 90vh;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+/* ── Mix button ──────────────────────────────────── */
+button.mix-btn {
+  display: block;
+  margin: 0.75rem 1rem;
+  padding: 0.6rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+button.mix-btn:hover  { opacity: 0.88; }
+button.mix-btn:active { transform: scale(0.97); }
+
+/* ── Dark mode toggle button ─────────────────────── */
+button.dark-mode-btn {
+  display: block;
+  margin: 0.25rem 1rem 0.75rem;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #000;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+button.dark-mode-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #6366f1;
+}
+
+/* ── Input form ──────────────────────────────────── */
+.input-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 1rem 0.75rem;
+}
+
+.input-form__label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.input-form__input {
+  padding: 0.45rem 0.75rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.5rem;
+  color: #000;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+.input-form__input:focus {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.input-form__btn {
+  padding: 0.45rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+.input-form__btn:hover  { opacity: 0.88; }
+.input-form__btn:active { transform: scale(0.97); }
+
+.input-form__error {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #f87171;
+}
+
+/* ── Section panels ──────────────────────────────── */
+.studentList,
+.notPresentList {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.studentList {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: #1e3a5f;
+  display: flex;
+  flex-direction: column;
+}
+
+.studentList > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 0.75rem;
+  overflow: auto;
+  padding: 1rem;
+  flex: 1;
+}
+
+/* ── Person card ─────────────────────────────────── */
+.person {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e2e8f0;
+  font-size: 0.8rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.15s, box-shadow 0.2s;
+  user-select: none;
+}
+.person:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+.person:active {
+  transform: translateY(0);
+}
+.person h2 {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+.person span {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: #94a3b8;
+  letter-spacing: 0.05em;
+}
+.person p {
+  margin: 0;
+  text-align: left;
+  width: 100%;
+}
+
+/* ── Not-present list inner grid ─────────────────── */
+.not-present {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem;
+  justify-content: flex-start;
+}
+
+/* ── Groups (mixed list) ─────────────────────────── */
+.group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* ── Error banner ────────────────────────────────── */
+.error {
+  margin: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
+  background-color: rgba(239, 68, 68, 0.15);
+  color: red;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+h1 {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #cbd5e1;
+}
