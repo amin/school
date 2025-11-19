@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06-07</title>
+    <base href="/06/" />
+  </head>
+  <body>
+    <h1>Vampires</h1>
+    <ul></ul>
+
+    <hr />
+
+    <form method="get">
+      <label for="sortBy">Sort by:</label>
+
+      <select name="sortBy">
+        <option value="actor">Actor</option>
+        <option value="name">Name</option>
+      </select>
+
+      <button type="submit">Fetch Vampires</button>
+    </form>
+
+    <script>
+      const list = document.querySelector("ul");
+      const form = document.querySelector("form");
+
+      const addVampires = (vampires) => {
+        for (const vampire of vampires) {
+          const item = document.createElement("li");
+          item.textContent = `${vampire.name} - ${vampire.actor}`;
+          list.append(item);
+        }
+      };
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        // TODO: Implement the fetch script here.
+        const formData = new FormData(form);
+        const params = new URLSearchParams();
+        params.append("sortBy", formData.get("sortBy"));
+
+        fetch(`vampires.php?${params.toString()}`)
+          .then((response) => response.json())
+          .then((data) => {
+            list.replaceChildren();
+            addVampires(data);
+          });
+      });
+    </script>
+  </body>
+</html>

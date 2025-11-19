@@ -1,0 +1,15 @@
+/home/amincident/School/C-Sharp/Week2/Assignment8/bin/Debug/net10.0/Assignment8
+/home/amincident/School/C-Sharp/Week2/Assignment8/bin/Debug/net10.0/Assignment8.deps.json
+/home/amincident/School/C-Sharp/Week2/Assignment8/bin/Debug/net10.0/Assignment8.runtimeconfig.json
+/home/amincident/School/C-Sharp/Week2/Assignment8/bin/Debug/net10.0/Assignment8.dll
+/home/amincident/School/C-Sharp/Week2/Assignment8/bin/Debug/net10.0/Assignment8.pdb
+/home/amincident/School/C-Sharp/Week2/Assignment8/obj/Debug/net10.0/Assignment8.GeneratedMSBuildEditorConfig.editorconfig
+/home/amincident/School/C-Sharp/Week2/Assignment8/obj/Debug/net10.0/Assignment8.AssemblyInfoInputs.cache
+/home/amincident/School/C-Sharp/Week2/Assignment8/obj/Debug/net10.0/Assignment8.AssemblyInfo.cs
+/home/amincident/School/C-Sharp/Week2/Assignment8/obj/Debug/net10.0/Assignment8.csproj.CoreCompileInputs.cache
+/home/amincident/School/C-Sharp/Week2/Assignment8/obj/Debug/net10.0/Assignment8.sourcelink.json
+/home/amincident/School/C-Sharp/Week2/Assignment8/obj/Debug/net10.0/Assignment8.dll
+/home/amincident/School/C-Sharp/Week2/Assignment8/obj/Debug/net10.0/refint/Assignment8.dll
+/home/amincident/School/C-Sharp/Week2/Assignment8/obj/Debug/net10.0/Assignment8.pdb
+/home/amincident/School/C-Sharp/Week2/Assignment8/obj/Debug/net10.0/Assignment8.genruntimeconfig.cache
+/home/amincident/School/C-Sharp/Week2/Assignment8/obj/Debug/net10.0/ref/Assignment8.dll

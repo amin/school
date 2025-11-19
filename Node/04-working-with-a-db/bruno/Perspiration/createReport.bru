@@ -1,0 +1,23 @@
+meta {
+  name: createReport
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3500/reports/createReport
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "title": "How to program Golang",
+    "authorId": "3"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

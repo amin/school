@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      :root {
+        font-size: 16px;
+        font-family: sans-serif;
+      }
+
+      body {
+        background: linear-gradient(to right, #667eea, #764ba2);
+      }
+
+      .container {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .actors {
+        display: grid;
+        width: 90vw;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 3rem;
+      }
+
+      .actor {
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .actor-name {
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+
+      .actor-img {
+        width: 125px;
+        height: 125px;
+        border: 0.2rem solid #fff;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="actors"></div>
+    </div>
+
+    <script type="text/javascript">
+      const actorsDiv = document.createDocumentFragment();
+
+      (async () => {
+        const response = await fetch(
+          "https://yrgo.github.io/api/movies/mean-girls.json"
+        );
+
+        const data = await response.json();
+        const actors = data.actors;
+
+        for (actor of actors) {
+          const actorImg = document.createElement("img");
+          actorImg.src = actor.image_url;
+          actorImg.classList.add("actor-img");
+
+          const actorName = document.createElement("div");
+          actorName.classList.add("actor-name");
+          actorName.textContent = actor.name;
+
+          const actorCharacter = document.createElement("div");
+          actorCharacter.classList.add("actor-character");
+          actorCharacter.textContent = actor.character;
+
+          const actorDiv = document.createElement("a");
+          actorDiv.href = actor.profile_url;
+          actorDiv.target = "_blank";
+          actorDiv.classList.add("actor");
+
+          actorDiv.append(actorImg, actorName, actorCharacter);
+
+          actorsDiv.append(actorDiv);
+        }
+
+        const container = document.querySelector(".actors");
+        container.appendChild(actorsDiv);
+      })();
+    </script>
+
+    <script type="script/plain">
+      (async () => {
+        const response = await fetch(
+          "https://yrgo.github.io/api/movies/mean-girls.json"
+        );
+
+        const data = await response.json();
+
+        const posterImg = document.createElement("img");
+        posterImg.src = data.poster_url;
+
+        document.querySelector(".movie-poster").appendChild(posterImg);
+
+        for (actor of data.actors) {
+          console.log(`${actor.character} was played by ${actor.name}.`);
+        }
+      })();
+    </script>
+  </body>
+</html>

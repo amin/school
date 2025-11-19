@@ -1,0 +1,15 @@
+/home/amincident/School/C-Sharp/Week2/Assigment2/bin/Debug/net10.0/Assigment2
+/home/amincident/School/C-Sharp/Week2/Assigment2/bin/Debug/net10.0/Assigment2.deps.json
+/home/amincident/School/C-Sharp/Week2/Assigment2/bin/Debug/net10.0/Assigment2.runtimeconfig.json
+/home/amincident/School/C-Sharp/Week2/Assigment2/bin/Debug/net10.0/Assigment2.dll
+/home/amincident/School/C-Sharp/Week2/Assigment2/bin/Debug/net10.0/Assigment2.pdb
+/home/amincident/School/C-Sharp/Week2/Assigment2/obj/Debug/net10.0/Assigment2.GeneratedMSBuildEditorConfig.editorconfig
+/home/amincident/School/C-Sharp/Week2/Assigment2/obj/Debug/net10.0/Assigment2.AssemblyInfoInputs.cache
+/home/amincident/School/C-Sharp/Week2/Assigment2/obj/Debug/net10.0/Assigment2.AssemblyInfo.cs
+/home/amincident/School/C-Sharp/Week2/Assigment2/obj/Debug/net10.0/Assigment2.csproj.CoreCompileInputs.cache
+/home/amincident/School/C-Sharp/Week2/Assigment2/obj/Debug/net10.0/Assigment2.sourcelink.json
+/home/amincident/School/C-Sharp/Week2/Assigment2/obj/Debug/net10.0/Assigment2.dll
+/home/amincident/School/C-Sharp/Week2/Assigment2/obj/Debug/net10.0/refint/Assigment2.dll
+/home/amincident/School/C-Sharp/Week2/Assigment2/obj/Debug/net10.0/Assigment2.pdb
+/home/amincident/School/C-Sharp/Week2/Assigment2/obj/Debug/net10.0/Assigment2.genruntimeconfig.cache
+/home/amincident/School/C-Sharp/Week2/Assigment2/obj/Debug/net10.0/ref/Assigment2.dll

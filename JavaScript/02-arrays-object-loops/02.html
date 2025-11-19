@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const songs = [
+        "Toxic",
+        "...Baby one more time",
+        "Everytime",
+        "Circus",
+        "Oops! I did it again",
+        "Lucky",
+        "I'm not a girl, not yet a woman",
+      ];
+
+      const person = {
+        name: "Britney Jean Spears",
+        birthdate: "2 December, 1981",
+        from: "McComb, Mississippi, USA",
+        length: 163,
+        children: ["Sean Federline", "Jayden James Federline"],
+        description:
+          "Britney Spears has been one of the most successful — and sometimes controversial — solo acts in popular music. Six of her first seven albums reached No. 1 on the Billboard 200.",
+      };
+
+      const albums = [
+        { title: "...Baby One More Time", year: 1999, label: "Jive" },
+        { title: "Oops!... I Did It Again", year: 2000, label: "Jive" },
+        { title: "Britney", year: 2001, label: "Jive" },
+        { title: "In the zone", year: 2003, label: "Jive, Zomba" },
+        { title: "Blackout", year: 2007, label: "Jive, Zomba" },
+        { title: "Circus", year: 2008, label: "Jive, Zomba" },
+        { title: "Femme Fatale", year: 2011, label: "Jive" },
+        { title: "Britney Jean", year: 2013, label: "RCA" },
+        { title: "Glory", year: 2016, label: "RCA" },
+      ];
+
+      songs.push("Gimmie More");
+      songs.splice(songs.indexOf("Circus"), 1);
+
+      // songs.forEach((element, index) => console.log(`${index+1}. ${element}`));
+
+      // 6. Loop through the songs array using a for loop. For each item, reverse its text and log it to the console. The output should look like this:
+      // for(let i = 0;i < songs.length; i++) {
+      //     console.log(songs[i].split("").reverse().join(""));
+      // }
+
+      // 7. Loop through the songs array using a while loop. Log each song to the console but if the loop reaches Lucky, use a break statement to stop the loop and console log Stop! Here's Lucky!. The output should look like this:
+
+      // let index = 0;
+
+      // while(index < songs.length ) {
+      //     if (songs[index] === 'Lucky')
+      //     {
+      //         console.log('Stop! Here\'s Lucky!');
+      //         break;
+      //     }
+      //     console.log(songs[index]);
+      //     index++;
+      // }
+
+      // 8. Loop through the songs array using a map loop. Inside the loop, return each item with an uppercase format using toUpperCase(). A map loop should always be saved into a new variable, which will hold the new modified array. By doing this, we are not editing the original array, we are just creating a modified copy. Log the new array, with the uppercase songs, to the console.
+      // const newSongs = songs.map((element) => element.toUpperCase());
+      // console.log(newSongs);
+
+      // 9. Use the person object which can be found in the resources folder and add it to your project. Log Britney's name and her date of birth to the console. The output should look like this:
+      // console.log(`Her name is ${person.name} and she was born ${person.birthdate}.`);
+
+      // 10.Continue working with the person object. Use a forEach() loop to loop through her children. Log each child to the console. The output should look like this:
+      //person.children.forEach((element) => console.log(element));
+
+      // 11. Add the albums array found in the resources folder to your project. Loop through each album using a forEach() loop. Log each element's title and year to the console. The output should look like this:
+      // albums.forEach(element => console.log(`${element.title}, ${element.year}.`));
+
+      //const getAlbumsFrom = (albumsArray, fromYear) => albumsArray.filter(album => album.year >= fromYear);
+
+      // const getAlbumsFrom = function(albumsArray, fromYear) {
+      //     return albumsArray.filter(function(album) {
+      //         return album.year >= fromYear;
+      //     });
+      // }
+
+      // console.log(getAlbumsFrom(albums, 2013));
+
+      // const recordLabelsUsed = albums.reduce((labelsUsed, album) => {
+      //   const labels = album.label.split(",").map((item) => item.trim());
+
+      //   labels.forEach((label) => {
+      //     labelsUsed[label] = (labelsUsed[label] || 0) + 1;
+      //   });
+
+      //   return labelsUsed;
+      // }, {});
+
+      const allLabels = albums.flatMap((album) =>
+        album.label.split(",").map((label) => label.trim())
+      );
+
+      const recordLabelsUsed = Object.fromEntries(
+        Object.entries(Object.groupBy(allLabels, (label) => label)).map(
+          ([label, group]) => [label, group.length]
+        )
+      );
+
+      console.log(recordLabelsUsed);
+    </script>
+  </body>
+</html>

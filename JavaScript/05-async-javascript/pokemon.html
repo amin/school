@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="pokeball">Get pokemon</button>
+    <div id="pokebox"></div>
+
+    <script>
+      const pokeball = document.querySelector("#pokeball");
+      const pokebox = document.querySelector("#pokebox");
+
+      const baseUrl = "https://pokeapi.co/api/v2/pokemon/";
+      const pokemons = [
+        "togepi",
+        "pikachu",
+        "charmander",
+        "snorlax",
+        "jigglypuff",
+      ];
+
+      let pokemonCounter = 0;
+
+      const fetchPokemon = async (pokemon) => {
+        try {
+          const response = await fetch(baseUrl + pokemon);
+          const data = await response.json();
+
+          console.log(data);
+
+          let abilitiesHTML = "<h2>Abilities</h2><ul>";
+          for ({ ability } of data.abilities) {
+            abilitiesHTML += `<li>${ability.name}</li>`;
+          }
+          abilitiesHTML += "</ul>";
+
+          pokebox.innerHTML = `
+      <h2>${data.name}</h2>
+      <img src="${data.sprites.other.home.front_default}"/>
+      <p>XP: ${data.base_experience}</p>
+      ${abilitiesHTML}
+    `;
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      pokeball.addEventListener("click", () => {
+        fetchPokemon(pokemons[pokemonCounter]);
+        pokemonCounter++;
+
+        if (pokemonCounter > pokemons.length - 1) {
+          pokemonCounter = 0;
+        }
+      });
+    </script>
+  </body>
+</html>

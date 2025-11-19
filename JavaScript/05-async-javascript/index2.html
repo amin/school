@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mean girls actors</title>
+
+    <style>
+      :root {
+        font-size: 16px;
+        font-family: sans-serif;
+      }
+
+      body {
+        background: linear-gradient(to right, #667eea, #764ba2);
+      }
+
+      .container {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .actors {
+        display: grid;
+        width: 90vw;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 3rem;
+      }
+
+      .actor {
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .actor-name {
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+
+      .actor-img {
+        width: 125px;
+        height: 125px;
+        border: 0.2rem solid #fff;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="actors"></div>
+    </div>
+
+    <script type="text/javascript">
+      const generateActor = (actors) => {
+        const actorsDiv = document.createDocumentFragment();
+
+        for (const actor of actors) {
+          const actorImg = document.createElement("img");
+          actorImg.src = actor.image_url;
+          actorImg.classList.add("actor-img");
+
+          const actorName = document.createElement("div");
+          actorName.classList.add("actor-name");
+          actorName.textContent = actor.name;
+
+          const actorCharacter = document.createElement("div");
+          actorCharacter.classList.add("actor-character");
+          actorCharacter.textContent = actor.character;
+
+          const actorDiv = document.createElement("a");
+          actorDiv.href = actor.profile_url;
+          actorDiv.target = "_blank";
+          actorDiv.classList.add("actor");
+
+          actorDiv.append(actorImg, actorName, actorCharacter);
+          actorsDiv.append(actorDiv);
+        }
+
+        return actorsDiv;
+      };
+
+      const fetchData = async () => {
+        const response = await fetch(
+          "https://yrgo.github.io/api/movies/mean-girls.json"
+        );
+
+        return await response.json();
+      };
+
+      (async () => {
+        try {
+          const { actors } = await fetchData();
+          const actorsFragment = generateActor(actors);
+          const container = document.querySelector(".actors");
+          container.appendChild(actorsFragment);
+        } catch (error) {
+          console.error("Error loading actors:", error);
+        }
+      })();
+    </script>
+  </body>
+</html>
