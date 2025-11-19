@@ -1,0 +1,3 @@
+[submodule "Projects/gateway-theater"]
+	path = Projects/gateway-theater
+	url = git@github.com:amin/gateway-theater.git
