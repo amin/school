@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04</title>
+  </head>
+  <body>
+    <form method="post">
+      <div>
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Louis de Pointe du Lac"
+        />
+      </div>
+      <div>
+        <label for="name">Actor:</label>
+        <input type="text" name="actor" id="actor" placeholder="Brad Pitt" />
+      </div>
+      <button type="submit">Add Vampire</button>
+    </form>
+
+    <script>
+      const form = document.querySelector("form");
+
+      form.addEventListener("submit", (event) => {
+        // TODO: Implement the POST logic.
+        event.preventDefault();
+        const formData = new FormData(form);
+
+        fetch("vampires.php", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => response.json())
+          .then((data) => console.log(data))
+          .catch((error) => console.warn(error));
+      });
+    </script>
+  </body>
+</html>
