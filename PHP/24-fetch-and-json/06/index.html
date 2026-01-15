@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>06-07</title>
+    <base href="/06/" />
   </head>
   <body>
     <h1>Vampires</h1>
@@ -29,7 +30,7 @@
       const addVampires = (vampires) => {
         for (const vampire of vampires) {
           const item = document.createElement("li");
-          item.innerHTML = `${vampire.name} - ${vampire.actor}`;
+          item.textContent = `${vampire.name} - ${vampire.actor}`;
           list.append(item);
         }
       };
@@ -45,9 +46,7 @@
         fetch(`vampires.php?${params.toString()}`)
           .then((response) => response.json())
           .then((data) => {
-            if (list.hasChildNodes()) {
-              list.innerHTML = "";
-            }
+            list.replaceChildren();
             addVampires(data);
           });
       });

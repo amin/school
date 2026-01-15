@@ -30,8 +30,10 @@ if (isset($_POST['name'], $_POST['actor'])) {
         http_response_code(400);
         exit(json_encode(['error' => 'The vampire is not unique!']));
     }
+
     $vampires[] = ['name' => $name, 'actor' => $actor];
     file_put_contents(VAMPIRE_JSON, json_encode($vampires));
+    http_response_code(201);
 }
 
 
